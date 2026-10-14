@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Geradores de senhas e dados sintéticos para desenvolvimento e testes."><title>Gerador Lab — ferramentas para criar</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
+<body>
+  <aside class="sidebar">
+    <a class="logo" href="/" aria-label="Gerador Lab, início"><span class="logo-icon">g.</span> gerador<span class="logo-light">lab</span></a>
+    <p class="nav-label">GERADORES</p>
+    <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar ferramenta" aria-label="Buscar ferramenta"></label>
+    <nav id="navigation" aria-label="Geradores"></nav>
+  </aside>
+  <main>
+    <header><span>WORKSPACE <span class="slash">/</span> Geradores</span><button id="theme" class="quiet" aria-label="Alternar tema">◐ <span>Alternar tema</span></button></header>
+    <section class="intro"><h1>Geradores</h1></section>
+    <div class="workspace">
+      <section class="generator panel" aria-labelledby="tool-title">
+        <div class="panel-heading"><span id="tool-icon" class="tool-icon">✳</span><div><h2 id="tool-title">Gerador de senha</h2><p id="tool-description"></p></div><span class="badge">PRONTO PARA USAR</span></div>
+        <form id="generator-form"><div id="options"></div><div class="quantity-row"><label for="count">Quantidade de resultados</label><input id="count" type="number" min="1" max="100" value="1" required></div><button class="primary" id="generate" type="submit">Gerar senha <span aria-hidden="true">↗</span></button></form>
+        <div class="result-heading"><h3>Seus resultados <span id="result-count">0</span></h3><button id="clear" class="quiet" disabled>Limpar</button></div>
+        <div id="results" class="results"><div class="empty"><p>Nenhum resultado gerado.</p><small>Configure as opções e clique em gerar.</small></div></div>
+        <div class="result-actions"><button id="copy-all" class="secondary" disabled>Copiar tudo</button><label class="export-label">Exportar <select id="export-format" aria-label="Formato de exportação"><option value="txt">TXT</option><option value="json">JSON</option><option value="csv">CSV</option></select></label><button id="download" class="quiet" disabled>Baixar ↓</button></div>
+      </section>
+      <aside class="context"><div class="tip-card"><span class="mini-label">INFORMAÇÕES</span><h3 id="tip-title"></h3><p id="tip"></p></div><div class="local-card"><span aria-hidden="true">◎</span><div><h3>Armazenamento de dados</h3><p>Os resultados não são armazenados.</p></div></div><a id="reference" class="reference" href="https://nodejs.org/api/crypto.html" target="_blank" rel="noreferrer">Consultar documentação ↗</a></aside>
+    </div>
+    <footer><span>GERADOR LAB · V1.0</span></footer>
+  </main>
+  <div id="notification" role="status" aria-live="polite"></div>
+</body></html>
